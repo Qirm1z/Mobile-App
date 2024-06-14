@@ -26,8 +26,9 @@ public class Main {
 		System.out.println("App creata con successo!");
 
 		do {
-			System.out.println(
-					"Valutazione media: " + String.format("%.2f", app.valutazioneMedia()) + "\nRicavo totale: " + String.format("%.2f", app.getRicavoTotale()) + "€");
+			System.out.println("Valutazione media: " + String.format("%.2f", app.valutazioneMedia())
+					+ "\nRicavo totale: " + String.format("%.2f", app.getRicavoTotale()) + "€");
+			// formattiamo con %.2f i float così da non visualizzare un numero inutilmente lungo
 			System.out.println(
 					"1.Download singolo\n2.Download multiplo\n3.Ricevi Recensione\n4.Visualizza recensioni\n5.Esci");
 			int scelta = sc.nextInt();
@@ -58,10 +59,10 @@ public class Main {
 				app.riceviRecensione(rec);
 				break;
 			case 4: // visualizza recensioni
-				 System.out.println("\nRecensioni: ");
-                 for (Recensione r : app.getElencoRecensioni()) {
-                     System.out.println(r);
-                 }
+				System.out.println("\nRecensioni: ");
+				for (Recensione r : app.getElencoRecensioni()) {
+					System.out.println(r);
+				}
 				break;
 			case 5: // esci
 				esci = true;
